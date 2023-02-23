@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
-mongoose.connect("YPUR_MONGO_LINK");
+mongoose.connect("YOUR_MONGO_DATABASE");
 
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -140,4 +140,3 @@ app.get("/post/:id", async (req, res) => {
 
 app.listen(4000);
 
-// mongodb+srv://webbyzar:z8KMGDsRJ5lcCduA@cluster0.qiybgku.mongodb.net/blog?retryWrites=true&w=majority
